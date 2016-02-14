@@ -5,5 +5,5 @@ public abstract class AbsSQL {
 	protected String nm_tabela;
 	protected String sqlCriarTabela;
 	protected String[] colunas; // colunas da tabela fora o id
-	protected abstract void iniciar();
+	protected abstract void iniciar(); // teste
 }
