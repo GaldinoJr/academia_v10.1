@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by Galdino on 20/08/2015.
  */
-public class AlterarCommand extends AbstractCommand {
+public class AlterarComand extends AbstractComand {
     public Resultado execute(EntidadeDominio entidade) {
         return fachada.alterar(entidade);
     }

@@ -1,11 +1,11 @@
 package com.example.academia2.Controler;
 
 import com.example.academia2.Core.Aplicacao.Resultado;
-import com.example.academia2.Core.Command.ICommand;
-import com.example.academia2.Core.Command.Impl.AlterarCommand;
-import com.example.academia2.Core.Command.Impl.ConsultarCommand;
-import com.example.academia2.Core.Command.Impl.ExcluirCommand;
-import com.example.academia2.Core.Command.Impl.SalvarCommand;
+import com.example.academia2.Core.Command.IComand;
+import com.example.academia2.Core.Command.Impl.AlterarComand;
+import com.example.academia2.Core.Command.Impl.ConsultarComand;
+import com.example.academia2.Core.Command.Impl.ExcluirComand;
+import com.example.academia2.Core.Command.Impl.SalvarComand;
 import com.example.academia2.Dominio.EntidadeDominio;
 
 import java.util.HashMap;
@@ -22,17 +22,17 @@ public class Controler {
     public static final String DF_EXCLUIR = "excluir";
 
 
-    private static Map<String, ICommand> commands;
+    private static Map<String, IComand> commands;
     //private static Map<String, IViewHelper> vhs;
     public Controler()
     {
-        commands = new HashMap<String, ICommand>();
+        commands = new HashMap<String, IComand>();
         // CADASTRA OS COMANDOS
 
-        commands.put(DF_SALVAR,  new SalvarCommand());
-        commands.put(DF_EXCLUIR, new ExcluirCommand());
-        commands.put(DF_CONSULTAR, new ConsultarCommand());
-        commands.put(DF_ALTERAR, new AlterarCommand());
+        commands.put(DF_SALVAR,  new SalvarComand());
+        commands.put(DF_EXCLUIR, new ExcluirComand());
+        commands.put(DF_CONSULTAR, new ConsultarComand());
+        commands.put(DF_ALTERAR, new AlterarComand());
 
 //        vhs = new HashMap<String, IViewHelper>();
 //        //CADASTRA AS CLASSES ************
@@ -56,7 +56,7 @@ public class Controler {
         // Verifica qual a a operação que está sendo feita
         // de acordo com o que está descrito acima, tem um mapa a chave é o nome da operação
         // e o conteudo é o new da mesma
-        ICommand command = commands.get(operacao);
+        IComand command = commands.get(operacao);
         Resultado resultado = command.execute(entidade); // Execulta a operação e
         return resultado; // retorna o resultado da mesma
     }

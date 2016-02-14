@@ -7,9 +7,9 @@ import com.example.academia2.Dominio.EntidadeDominio;
 /**
  * Created by Galdino on 20/08/2015.
  */
-public class VisualizarCommand extends AbstractCommand {
-    public Resultado execute(EntidadeDominio entidade) {
-
-        return fachada.visualizar(entidade);
+public class SalvarComand extends AbstractComand {
+    public Resultado execute(EntidadeDominio entidade)
+    {
+        return fachada.salvar(entidade);
     }
 }
