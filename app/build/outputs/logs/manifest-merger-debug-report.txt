@@ -33,12 +33,12 @@ ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidMa
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:13:9-42
 	android:theme
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:15:9-40
-activity#com.example.academia2.TelaPrincipal02
+activity#com.example.academia2.Telas.TelaPrincipal02
 ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:16:9-24:20
 	android:label
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:18:13-68
 	android:name
-		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:17:13-65
+		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:17:13-50
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
@@ -49,33 +49,33 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:22:27-74
-activity#com.example.academia2.TelaPrincipal
+activity#com.example.academia2.Telas.TelaPrincipal
 ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:25:9-28:20
 	android:label
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:27:13-45
 	android:name
-		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:26:13-63
-activity#com.example.academia2.TelaExercicio
+		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:26:13-48
+activity#com.example.academia2.Telas.TelaExercicio
 ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:29:9-32:20
 	android:label
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:31:13-66
 	android:name
-		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:30:13-63
-activity#com.example.academia2.TelaListaExercicios
+		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:30:13-48
+activity#com.example.academia2.Telas.TelaListaExercicios
 ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:33:9-36:20
 	android:label
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:35:13-73
 	android:name
-		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:34:13-69
-activity#com.example.academia2.TelaPrincipalFicha
+		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:34:13-54
+activity#com.example.academia2.Telas.TelaPrincipalFicha
 ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:37:9-40:20
 	android:label
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:39:13-72
 	android:name
-		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:38:13-68
-activity#com.example.academia2.TelaFichaListExercicios
+		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:38:13-53
+activity#com.example.academia2.Telas.TelaFichaListExercicios
 ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:41:9-44:20
 	android:label
 		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:43:13-78
 	android:name
-		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:42:13-73
+		ADDED from C:\Users\Galdino\StudioProjects\academia_v10.1\app\src\main\AndroidManifest.xml:42:13-58
