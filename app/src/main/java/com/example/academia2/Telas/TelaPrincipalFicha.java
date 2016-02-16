@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -38,6 +39,8 @@ public class TelaPrincipalFicha extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_principal_ficha);
+		//
+
 		//
 		btnAddTreino = (Button)findViewById(id.btnAddTreino);
 		txtNomeTreino = (EditText)findViewById(id.txtNomeTreino);
@@ -70,6 +73,7 @@ public class TelaPrincipalFicha extends Activity implements OnClickListener {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
+		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_MODE_CHANGED); // Para não iniciar o teclado quando abrir a tela
 		getMenuInflater().inflate(R.menu.tela_principal_ficha, menu);
 		return true;
 	}
