@@ -27,5 +27,6 @@
     <string name="title_activity_tela_ficha_list_exercicios">TelaFichaListExercicios</string>
     <string name="gMuscular1">Grupo muscular 1</string>
     <string name="nmTreino">Nome do treino</string>
+    <string name="click"><u><b>Click</b></u></string>
 
 </resources>

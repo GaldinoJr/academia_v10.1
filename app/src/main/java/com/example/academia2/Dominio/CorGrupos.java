@@ -44,7 +44,7 @@ public class CorGrupos {
 	/*
 	* @param color1 int
 	 * @param color2 int
-	 * @param tolerance int - tolerancia m�xima permitida entre as cores RGB
+	 * @param tolerance int - tolerancia máxima permitida entre as cores RGB
 	 * @return boolean
 	 */
 
@@ -60,16 +60,27 @@ public class CorGrupos {
 		
 	
 	  
-	private Integer cor_abdomen = R.drawable.cor_abdomen,
-	 cor_biceps = R.drawable.cor_biceps,
-	 cor_costa = R.drawable.cor_costa,
-	 cor_coxa = R.drawable.cor_coxa,
-	 cor_gluteo = R.drawable.cor_gluteo,
-	 cor_ombro = R.drawable.cor_ombro,
-	 cor_panturrilha = R.drawable.cor_panturrilha,
-	 cor_peito = R.drawable.cor_peito,
-	 cor_triceps = R.drawable.cor_triceps;
-	
+//	private Integer cor_abdomen = R.drawable.cor_abdomen,
+//	 cor_biceps = R.drawable.cor_biceps,
+//	 cor_costa = R.drawable.cor_costa,
+//	 cor_coxa = R.drawable.cor_coxa,
+//	 cor_gluteo = R.drawable.cor_gluteo,
+//	 cor_ombro = R.drawable.cor_ombro,
+//	 cor_panturrilha = R.drawable.cor_panturrilha,
+//	 cor_peito = R.drawable.cor_peito,
+//	 cor_triceps = R.drawable.cor_triceps;
+//
+
+	private Integer cor_abdomen = R.drawable.icone_abdomen,
+			cor_biceps = R.drawable.icone_biceps,
+			cor_costa = R.drawable.icone_costas,
+			cor_coxa = R.drawable.icone_coxa,
+			cor_gluteo = R.drawable.icone_gluteo,
+			cor_ombro = R.drawable.icone_ombro,
+			cor_panturrilha = R.drawable.icone_panturilha,
+			cor_peito = R.drawable.icone_peito2,
+			cor_triceps = R.drawable.icone_triceps;
+
 	private Integer[] corID = 
 	{
 			cor_abdomen, 

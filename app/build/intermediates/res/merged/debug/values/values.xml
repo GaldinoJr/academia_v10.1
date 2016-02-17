@@ -13,6 +13,7 @@
     <string name="action_settings">Settings</string>
     <string name="add">+</string>
     <string name="app_name">Guia de exercícios para academia</string>
+    <string name="click"><u><b>Click</b></u></string>
     <string name="descr">Descrição: </string>
     <string name="exe">Exercícios</string>
     <string name="ficha">Ficha</string>

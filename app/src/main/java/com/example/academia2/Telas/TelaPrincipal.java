@@ -27,6 +27,15 @@ import android.widget.Toast;
 
 public class TelaPrincipal extends Activity implements View.OnTouchListener, OnClickListener {
 	//private String grupo;
+	private ImageView imgIconeAbdomen,
+						imgIconeBiceps,
+						imgIconeCostas,
+						imgIconeCoxa,
+						imgIconeGluteo,
+						imgIconeOmbro,
+						imgIconePanturrilha,
+						imgIconePeito,
+						imgIconeTriceps;
 	private Button btnVirarFotoPrinc,
 					btnVirarFotoPrinc2;
 	private Intent intent;
@@ -49,6 +58,25 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 		btnVirarFotoPrinc2 = (Button)findViewById(id.btnVirarFotoPrinc2);
 		btnVirarFotoPrinc.setOnClickListener(this);
 		btnVirarFotoPrinc2.setOnClickListener(this);
+		imgIconeAbdomen = (ImageView)findViewById(id.imgIconeAbdomen);
+		imgIconeBiceps = (ImageView)findViewById(id.imgIconeBiceps);
+		imgIconeCostas = (ImageView)findViewById(id.imgIconeCostas);
+		imgIconeCoxa = (ImageView)findViewById(id.imgIconeCoxa);
+		imgIconeGluteo = (ImageView)findViewById(id.imgIconeGluteo);
+		imgIconeOmbro = (ImageView)findViewById(id.imgIconeOmbro);
+		imgIconePanturrilha = (ImageView)findViewById(id.imgIconePanturrilha);
+		imgIconePeito = (ImageView)findViewById(id.imgIconePeito);
+		imgIconeTriceps = (ImageView)findViewById(id.imgIconeTriceps);
+		//
+		imgIconeAbdomen.setOnClickListener(this);
+		imgIconeBiceps.setOnClickListener(this);
+		imgIconeCostas.setOnClickListener(this);
+		imgIconeCoxa.setOnClickListener(this);
+		imgIconeGluteo.setOnClickListener(this);
+		imgIconeOmbro.setOnClickListener(this);
+		imgIconePanturrilha.setOnClickListener(this);
+		imgIconePeito.setOnClickListener(this);
+		imgIconeTriceps.setOnClickListener(this);
 		//
 			iVprincipal = (ImageView)findViewById(id.image);
 			 if (iVprincipal != null) {
@@ -56,31 +84,31 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 			    }
 		//
 		
-		final ListView lv1 = (ListView) findViewById(R.id.list);
+		//final ListView lv1 = (ListView) findViewById(R.id.list);
 		
-		lv1.setAdapter(new GrupoMuscularBaseAdapter(this, image_details));
+		//lv1.setAdapter(new GrupoMuscularBaseAdapter(this, image_details));
 		
-		lv1.setOnItemClickListener(new OnItemClickListener() 
-		{
-			@Override
-			public void onItemClick(AdapterView<?> a, View v, int position, long id) 
-			{
-				Object o = lv1.getItemAtPosition(position);
-				
-				GrupoMuscular obj_itemDetails = (GrupoMuscular)o;
-				grupo = obj_itemDetails.getNome();
-				Exercicio exercicio = new Exercicio();
-				exercicio.ordenarVetores(grupo);
-				vetor = exercicio.getVetCorrespondente();
-				if(vetor == null)
-				{
-					Toast.makeText(TelaPrincipal.this, "Não à exercicios para este grupo", Toast.LENGTH_SHORT);
-					 Intent intent = new Intent(Intent.ACTION_MAIN); 
-					 finish();
-				}
-            	chamarTelaCorrespondeteAoGrupo(vetor, grupo);
-			}
-		});
+		//lv1.setOnItemClickListener(new OnItemClickListener()
+//		{
+//			@Override
+//			public void onItemClick(AdapterView<?> a, View v, int position, long id)
+//			{
+		//		Object o = lv1.getItemAtPosition(position);
+//
+//				GrupoMuscular obj_itemDetails = (GrupoMuscular)o;
+//				grupo = obj_itemDetails.getNome();
+//				Exercicio exercicio = new Exercicio();
+//				exercicio.ordenarVetores(grupo);
+//				vetor = exercicio.getVetCorrespondente();
+//				if(vetor == null)
+//				{
+//					Toast.makeText(TelaPrincipal.this, "Não à exercicios para este grupo", Toast.LENGTH_SHORT);
+//					 Intent intent = new Intent(Intent.ACTION_MAIN);
+//					 finish();
+//				}
+//            	chamarTelaCorrespondeteAoGrupo(vetor, grupo);
+//			}
+//		});
 	}
 
 	@Override
@@ -98,11 +126,11 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 		b=new Bundle();
 		b.putStringArray("exe", vetExe);
 		intent = new Intent();
-        // Para chamar a pr�xima tela tem que dizer qual e a tela atual, e dpois a pr�xima tela( a que vai ser chamada)
+        // Para chamar a próxima tela tem que dizer qual e a tela atual, e dpois a próxima tela( a que vai ser chamada)
         intent.setClass(TelaPrincipal.this, TelaListaExercicios.class);
 		intent.putExtras(b);
 		intent.putExtra("grupo", grupo);
-		startActivity(intent); // chama a pr�xima tela
+		startActivity(intent); // chama a próxima tela
         finish(); // Encerra a tela atual
 	}
 	
@@ -184,7 +212,7 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 			 vetor = exercicio.getVetCorrespondente();
 			 if(vetor == null)
 			 {
-				Toast.makeText(TelaPrincipal.this, "N�o � exercicios para este grupo", Toast.LENGTH_SHORT);
+				Toast.makeText(TelaPrincipal.this, "Não à exercicios para este grupo", Toast.LENGTH_SHORT);
 				Intent intent = new Intent(Intent.ACTION_MAIN); 
 				finish();
 			 }
@@ -211,13 +239,13 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 		int teste;
 	    ImageView img = (ImageView) findViewById (hotspotId);
 	    if (img == null) {
-	       Log.d ("ImageAreasActivity", "Imagem n�o encontrada");
+	       Log.d ("ImageAreasActivity", "Imagem não encontrada");
 	       return 0;
 	    } else {
 	      img.setDrawingCacheEnabled(true); 
 	      Bitmap hotspots = Bitmap.createBitmap(img.getDrawingCache()); 
 	      if (hotspots == null) {
-	         Log.d ("ImageAreasActivity", "imagem n�o foi criada");
+	         Log.d ("ImageAreasActivity", "imagem não foi criada");
 	         return 0;
 	      } else {
 	        img.setDrawingCacheEnabled(false);
@@ -226,7 +254,7 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 	        {
 	        	teste = hotspots.getPixel(x, y);
 	        }
-	        catch(Exception e) // n�o conseguiu 
+	        catch(Exception e) // não conseguiu
 	        {
 	        	teste = 0; // retorna zero
 	        }
@@ -243,7 +271,7 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 		{
 			int proximaImagem = -1;
 			ImageView imagemAtual = (ImageView) findViewById (R.id.image);
-			if(imagemAtual == null) // n�o tem imagem na tela?
+			if(imagemAtual == null) // não tem imagem na tela?
 				return; // volta para onde estava 
 		    Integer tagNum = (Integer) imagemAtual.getTag ();
 		    int idImagemAtual = (tagNum == null) ? R.drawable.principal_frente : tagNum.intValue ();
@@ -254,19 +282,51 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 				proximaImagem = R.drawable.principal_frente;
 			
 			 if (proximaImagem > 0) {
-				 imagemAtual.setImageResource (proximaImagem);
+				 imagemAtual.setImageResource(proximaImagem);
 				 imagemAtual.setTag (proximaImagem);
 		       }
 		}
+		else if(v == imgIconeAbdomen)
+			imageClick("Abdomen");
+		else if(v == imgIconeBiceps)
+			imageClick("Biceps");
+		else if(v == imgIconeCostas)
+			imageClick("Costas");
+		else if(v == imgIconeCoxa)
+			imageClick("Coxa");
+		else if(v == imgIconeGluteo)
+			imageClick("Gluteo");
+		else if(v == imgIconeOmbro)
+			imageClick("Ombro");
+		else if(v == imgIconePanturrilha)
+			imageClick("Panturrilha");
+		else if(v == imgIconePeito)
+			imageClick("Peito");
+		else if(v == imgIconeTriceps)
+			imageClick("Triceps");
+	}
+	private void imageClick(String sGrupo)
+	{
+		grupo = sGrupo;
+		Exercicio exercicio = new Exercicio();
+		exercicio.ordenarVetores(grupo);
+		vetor = exercicio.getVetCorrespondente();
+		if(vetor == null)
+		{
+			Toast.makeText(TelaPrincipal.this, "Não à exercicios para este grupo", Toast.LENGTH_SHORT);
+			Intent intent = new Intent(Intent.ACTION_MAIN);
+			finish();
+		}
+		chamarTelaCorrespondeteAoGrupo(vetor, grupo);
 	}
 
 	public void onBackPressed() // voltar?
 	{
 		
 			Intent intent = new Intent();
-	        // Para chamar a pr�xima tela tem que dizer qual e a tela atual, e dpois a pr�xima tela( a que vai ser chamada)
+	        // Para chamar a próxima tela tem que dizer qual e a tela atual, e dpois a próxima tela( a que vai ser chamada)
 	        intent.setClass(TelaPrincipal.this, TelaPrincipal02.class);
-			startActivity(intent); // chama a pr�xima tela(tela anterior)
+			startActivity(intent); // chama a próxima tela(tela anterior)
 	        finish();
 		
 	}	

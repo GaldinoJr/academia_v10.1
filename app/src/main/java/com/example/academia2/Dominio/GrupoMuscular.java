@@ -31,13 +31,13 @@ public class GrupoMuscular extends EntidadeDominio {
 			flgHouveTroca = false;
 			for(i = 0; i < nTamanho; i++)
 			{
-				comp = vetSgrupos[i].compareTo(vetSgrupos[i+1]); // compara o indice atual com o pr�ximo indice
-				if(comp > 0) // Indice atual � maior que o pr�ximo indice?
-				{ // Sim, ent�o troca
+				comp = vetSgrupos[i].compareTo(vetSgrupos[i+1]); // compara o indice atual com o próximo indice
+				if(comp > 0) // Indice atual é maior que o próximo indice?
+				{ // Sim, então troca
 					sAux = vetSgrupos[i];
 					vetSgrupos[i] = vetSgrupos[i+1];
 					vetSgrupos[i+1] = sAux;
-					i = -1; // recom�a do zero
+					i = -1; // recomeça do zero
 					flgHouveTroca = true; // indica que houve troca
 				}
 			}

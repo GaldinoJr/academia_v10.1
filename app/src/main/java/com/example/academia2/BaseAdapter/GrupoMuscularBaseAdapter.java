@@ -48,8 +48,8 @@ public class GrupoMuscularBaseAdapter extends BaseAdapter {
 			flgHouveTroca = false;
 			for(i = 0; i < nTamanho-1; i++)
 			{
-				if(imgid[i] > imgid[i+1]) // Atual � maior que o pr�ximo?
-				{ // sim, ent�o troca
+				if(imgid[i] > imgid[i+1]) // Atual é maior que o próximo?
+				{ // sim, então troca
 					aux = imgid[i];
 					imgid[i] = imgid[i+1];
 					imgid[i+1] = aux;
@@ -65,13 +65,13 @@ public class GrupoMuscularBaseAdapter extends BaseAdapter {
 		return grupoMuscularArrayList.size();
 	}
 	
-	// Encontra a pocis�o no array 
+	// Encontra a pocisão no array
 	public Object getItem(int position) 
 	{
 		return grupoMuscularArrayList.get(position);
 	}
 	
-	// Devolve a posi��o
+	// Devolve a posição
 	public long getItemId(int position) 
 	{
 		return position;
@@ -88,19 +88,19 @@ public class GrupoMuscularBaseAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent)
 	{
 		ViewHolder holder;
-		if(convertView == null) // A lista ainda n�o foi criada
+		if(convertView == null) // A lista ainda não foi criada
 		{
 			// cria o inflater que servira para converter para um xml ficar dentro do outro
 			convertView = l_Inflater.inflate(R.layout.xmlgrupo, null);
 			holder = new ViewHolder();
-			// recebe o conteudo do xml que ser� um item da listView, associando os objtos da tela com os daqui
+			// recebe o conteudo do xml que sera um item da listView, associando os objtos da tela com os daqui
 			holder.itemImage = (ImageView)convertView.findViewById(id.imgExercicio);
 			holder.txt_itemName = (TextView)convertView.findViewById(id.txtGrupoName);
 			convertView.setTag(holder); // devolve os conteudos
 		}
-		else // se j� foi criada 
+		else // se já foi criada
 		{
-			holder = (ViewHolder) convertView.getTag(); // Pega o conteudo que j� foi enviado
+			holder = (ViewHolder) convertView.getTag(); // Pega o conteudo que já foi enviado
 		}
 		// 
 		holder.txt_itemName.setText(grupoMuscularArrayList.get(position).getNome());

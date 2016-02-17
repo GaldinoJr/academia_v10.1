@@ -49,15 +49,111 @@
                 android:layout_height="fill_parent"
                 android:scaleType="fitCenter"
                 android:src="@drawable/principal_frente" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/click"
+                android:textSize="@dimen/tamanho20"
+                android:layout_marginBottom="40dp"
+                android:layout_marginRight="@dimen/tamanho20"
+                android:id="@+id/textView"
+                android:layout_gravity="right|bottom"
+                android:textStyle="bold" />
         </FrameLayout>
 
-        <ListView
-            android:id="@+id/list"
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="3" >
-        </ListView>
+            android:layout_weight="6">
+            <!--android:scaleType="fitXY"-->
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconeAbdomen"
+                    android:src="@drawable/icone_abdomen"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconeBiceps"
+                    android:src="@drawable/icone_biceps"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconeCostas"
+                    android:src="@drawable/icone_costas"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconeCoxa"
+                    android:src="@drawable/icone_coxa"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconeGluteo"
+                    android:src="@drawable/icone_gluteo"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconeOmbro"
+                    android:src="@drawable/icone_ombro"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconePanturrilha"
+                    android:src="@drawable/icone_panturilha"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconePeito"
+                    android:src="@drawable/icone_peito2"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imgIconeTriceps"
+                    android:src="@drawable/icone_triceps"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+   <!-- <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="6" >
+    </ListView>-->
     </LinearLayout>
 
     <Button
