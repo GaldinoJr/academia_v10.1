@@ -28,5 +28,6 @@
     <string name="gMuscular1">Grupo muscular 1</string>
     <string name="nmTreino">Nome do treino</string>
     <string name="click"><u><b>Click</b></u></string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>

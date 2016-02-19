@@ -30,6 +30,7 @@
     <string name="orientacao1">Toque na tela ou selecione na lista o grupo</string>
     <string name="primario">Primário</string>
     <string name="secundario">Secundário</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_tela_exercicio">Exercício</string>
     <string name="title_activity_tela_ficha_list_exercicios">TelaFichaListExercicios</string>
     <string name="title_activity_tela_lista_exercicios">Lista de exercicios</string>

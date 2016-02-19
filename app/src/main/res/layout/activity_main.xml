@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:background="#FFFFFF"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center"
+        android:id="@+id/imgIconeAbdomen"
+        android:src="@drawable/icone_abdomen"
+        android:scaleType="centerCrop"
+        />
+
+</LinearLayout>

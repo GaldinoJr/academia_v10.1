@@ -8,6 +8,10 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
 
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/academia"
@@ -41,6 +45,10 @@
         <activity
             android:name="com.example.academia2.Telas.TelaFichaListExercicios"
             android:label="@string/title_activity_tela_ficha_list_exercicios" >
+        </activity>
+        <activity
+            android:name="com.example.academia2.Telas.MainActivity"
+            android:label="@string/title_activity_main" >
         </activity>
     </application>
 

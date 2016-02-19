@@ -1,7 +1,11 @@
 package com.example.academia2.Telas;
-// Vers�o 3.0
+// Versao 3.0
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 
+import com.example.academia2.AndroidItens.RoundAdapter;
+import com.example.academia2.AndroidItens.RoundImage;
 import com.example.academia2.Dominio.CorGrupos;
 import com.example.academia2.Dominio.Exercicio;
 import com.example.academia2.Dominio.GrupoMuscular;
@@ -9,6 +13,13 @@ import com.example.academia2.BaseAdapter.GrupoMuscularBaseAdapter;
 import com.example.academia2.R;
 import com.example.academia2.R.id;
 
+import android.graphics.BitmapFactory;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Shader;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -77,6 +88,21 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 		imgIconePanturrilha.setOnClickListener(this);
 		imgIconePeito.setOnClickListener(this);
 		imgIconeTriceps.setOnClickListener(this);
+		//
+		RoundAdapter ra = new RoundAdapter();
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Abdomen",this));
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Biceps",this));
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Costas",this));
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Coxa",this));
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Gluteo",this));
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Ombro",this));
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Panturrilha",this));
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Peito",this));
+		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Triceps",this));
+//		Bitmap bm = BitmapFactory.decodeResource(this.getResources(), R.drawable.icone_abdomen);
+//		RoundImage roundedImage  = new RoundImage(bm);
+//		imgIconeAbdomen.setImageDrawable(roundedImage);
+
 		//
 			iVprincipal = (ImageView)findViewById(id.image);
 			 if (iVprincipal != null) {

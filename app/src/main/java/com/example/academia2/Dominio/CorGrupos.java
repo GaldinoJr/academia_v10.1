@@ -78,7 +78,7 @@ public class CorGrupos {
 			cor_gluteo = R.drawable.icone_gluteo,
 			cor_ombro = R.drawable.icone_ombro,
 			cor_panturrilha = R.drawable.icone_panturilha,
-			cor_peito = R.drawable.icone_peito2,
+			cor_peito = R.drawable.icone_peito,
 			cor_triceps = R.drawable.icone_triceps;
 
 	private Integer[] corID = 
