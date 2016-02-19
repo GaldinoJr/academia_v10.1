@@ -79,7 +79,7 @@ public class TelaPrincipal extends Activity implements View.OnTouchListener, OnC
 		imgIconeAbdomen.setImageDrawable(ra.RoundImageGrupo("Abdomen",this));
 		imgIconeBiceps.setImageDrawable(ra.RoundImageGrupo("Biceps",this));
 		imgIconeCostas.setImageDrawable(ra.RoundImageGrupo("Costas",this));
-		imgIconeCostas.setImageDrawable(ra.RoundImageGrupo("Coxa",this));
+		imgIconeCoxa.setImageDrawable(ra.RoundImageGrupo("Coxa",this));
 		imgIconeGluteo.setImageDrawable(ra.RoundImageGrupo("Gluteo",this));
 		imgIconeOmbro.setImageDrawable(ra.RoundImageGrupo("Ombro",this));
 		imgIconePanturrilha.setImageDrawable(ra.RoundImageGrupo("Panturrilha",this));
