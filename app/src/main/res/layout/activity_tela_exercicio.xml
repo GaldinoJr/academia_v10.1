@@ -11,12 +11,13 @@
 
      <ImageView
         android:id="@+id/imgCorTelaExer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="6dp"
-        android:src="@drawable/cor_peito" />
+        android:src="@drawable/icone_peito"
+         android:scaleType="centerCrop"
+         />
 
     <TextView
         android:id="@+id/txtNomeGrupo"
@@ -34,7 +35,7 @@
         android:layout_width="fill_parent"
         android:layout_height="2dip"
         android:layout_below="@+id/txtNomeGrupo"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="#A8A8A8" />
 
     <TextView

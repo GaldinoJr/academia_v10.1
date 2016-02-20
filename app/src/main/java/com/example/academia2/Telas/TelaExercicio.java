@@ -1,11 +1,13 @@
 package com.example.academia2.Telas;
 
 
+import com.example.academia2.AndroidItens.RoundAdapter;
 import com.example.academia2.R;
 import com.example.academia2.R.id;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.webkit.WebView;
@@ -15,28 +17,27 @@ import android.widget.TextView;
 public class TelaExercicio extends Activity{
 
 	private TextView txtNomeExe,
-	txtNomeGrupo, 
-	txtPrimario,
-	txtSecundario,
-	txtDescricao;
+					txtNomeGrupo,
+					txtPrimario,
+					txtSecundario,
+					txtDescricao;
 	private String nome,
-		exe,
-		CaminhoGif,
-		grupo,
-		primario,
-		secundario,
-		descricao,
-		aux;
+					exe,
+					CaminhoGif,
+					grupo,
+					primario,
+					secundario,
+					descricao,
+					aux;
 	private WebView wvExercicio;
-	private ImageView imgCor;
+	private ImageView imgCorTelaExer;
 	private String[] vetExe;
-	private Integer idCor;
+	//private Integer idCor;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_exercicio);
-		
 		// Associa o objeto
 		txtNomeExe = (TextView)findViewById(com.example.academia2.R.id.txtDescriExe);
 		txtNomeGrupo = (TextView)findViewById(com.example.academia2.R.id.txtNomeGrupo);
@@ -45,13 +46,13 @@ public class TelaExercicio extends Activity{
 		txtDescricao =(TextView)findViewById(com.example.academia2.R.id.txtDescricao);
 		//
 		wvExercicio = (WebView)findViewById(com.example.academia2.R.id.wvExercicio);
-		imgCor = (ImageView)findViewById(id.imgCorTelaExer);
+		imgCorTelaExer = (ImageView)findViewById(id.imgCorTelaExer);
 		// cria a intenção que vai receber os dados da tela 1
         Intent dados = getIntent();
         // Recebe os dados da tela anterior
         nome = dados.getStringExtra("nome");
         exe = dados.getStringExtra("exe");
-        idCor = dados.getIntExtra("idCor", 0);
+        //idCor = dados.getIntExtra("idCor", 0);
         
         // Recebe o conteudo do vetor que vai ser devolvido
         vetExe = (String[])dados.getSerializableExtra("exercicios");
@@ -65,7 +66,10 @@ public class TelaExercicio extends Activity{
         // Devolve os conteudos	
         txtNomeExe.setText(exe);
         txtNomeGrupo.setText(grupo);
-        imgCor.setImageResource(idCor);
+       // imgCor.setImageResource(idCor);
+		//arredonda a imagem
+		RoundAdapter ra = new RoundAdapter();
+		imgCorTelaExer.setImageDrawable(ra.RoundImageGrupo(grupo, this));
         // Exibe a animação em gif
 		wvExercicio.loadUrl(CaminhoGif);
         // 

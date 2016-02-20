@@ -4,6 +4,7 @@ package com.example.academia2.Telas;
 
 import java.util.ArrayList;
 
+import com.example.academia2.AndroidItens.RoundAdapter;
 import com.example.academia2.Dominio.CorGrupos;
 import com.example.academia2.Dominio.Exercicio;
 import com.example.academia2.BaseAdapter.ExercicioBaseAdapter;
@@ -29,8 +30,8 @@ public class TelaListaExercicios extends Activity {
 	private String[] vetExe;
 	private String grupo;
 	private ImageView imgCorGrupo;
-	private CorGrupos corGrupos;
-	private Integer idCor;
+	//private CorGrupos corGrupos;
+	//private Integer idCor;
 	private Intent dados ;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +49,15 @@ public class TelaListaExercicios extends Activity {
         grupo = dados.getStringExtra("grupo");
 		
         // Indentifica qual a imagem correspondente do grupo muscular 
-        corGrupos = new CorGrupos();
-        idCor = corGrupos.verificarCorGrupo(grupo);
-        
+        //corGrupos = new CorGrupos();
+        //idCor = corGrupos.verificarCorGrupo(grupo);
+
+		//arredonda a imagem
+		RoundAdapter ra = new RoundAdapter();
+		imgCorGrupo.setImageDrawable(ra.RoundImageGrupo(grupo,this));
+
         // Devolve os conteudos
-        imgCorGrupo.setImageResource(idCor);
+       // imgCorGrupo.setImageResource(idCor);
 		txtNomeGrupo.setText(grupo);
 		
 		
@@ -86,7 +91,7 @@ public class TelaListaExercicios extends Activity {
 				intent.putExtra("grupo", grupo);
 				intent.putExtra("nome",nome);
 				intent.putExtra("exe", exe);
-				intent.putExtra("idCor", idCor);
+				//intent.putExtra("idCor", idCor);
 				b2.putStringArray("vetExe", vetExe);
 				intent.putExtras(b2);
 				

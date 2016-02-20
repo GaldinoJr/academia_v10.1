@@ -29,5 +29,6 @@
     <string name="nmTreino">Nome do treino</string>
     <string name="click"><u><b>Click</b></u></string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="activity_image_trans">TransicaoImagemGrupo</string>
 
 </resources>
