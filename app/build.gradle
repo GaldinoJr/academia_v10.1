@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
+    compileSdkVersion 21
     buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.example.academia2"
         minSdkVersion 8
-        targetSdkVersion 18
+        targetSdkVersion 21
     }
 
     buildTypes {
@@ -19,5 +19,5 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.android.support:support-v4:21.0.0'
 }
